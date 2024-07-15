@@ -18,7 +18,8 @@ library(FeatureExtraction)
 #                                    cohortIds = c(-1),
 #                                    rowIdField = "subject_id",
 #                                    covariateSettings,
-#                                    aggregated = FALSE) {
+#                                    aggregated = FALSE,
+#                                    minCharacterizationMean = 0) {
 #    writeLines("Constructing length of observation covariates")
 #    if (covariateSettings$useLengthOfObs == FALSE) {
 #      return(NULL)

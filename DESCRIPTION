@@ -1,8 +1,8 @@
 Package: FeatureExtraction
 Type: Package
 Title: Generating Features for a Cohort
-Version: 3.8.0
-Date: 2025-03-19
+Version: 3.9.0
+Date: 2025-04-16
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut")),
   person("Marc", "Suchard", role = c("aut")),
@@ -28,7 +28,7 @@ NeedsCompilation: no
 RoxygenNote: 7.3.2
 Encoding: UTF-8
 Language: en-US
-Packaged: 2025-03-19 15:14:58 UTC; ginberg
+Packaged: 2025-04-16 13:12:46 UTC; ginberg
 Author: Martijn Schuemie [aut],
   Marc Suchard [aut],
   Patrick Ryan [aut],
@@ -37,4 +37,4 @@ Author: Martijn Schuemie [aut],
   Ger Inberg [aut, cre],
   Observational Health Data Science and Informatics [cph]
 Repository: CRAN
-Date/Publication: 2025-03-19 16:00:05 UTC
+Date/Publication: 2025-04-20 09:50:02 UTC

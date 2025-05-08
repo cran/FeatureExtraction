@@ -1,8 +1,8 @@
 Package: FeatureExtraction
 Type: Package
 Title: Generating Features for a Cohort
-Version: 3.9.0
-Date: 2025-04-16
+Version: 3.10.0
+Date: 2025-05-08
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut")),
   person("Marc", "Suchard", role = c("aut")),
@@ -14,7 +14,8 @@ Authors@R: c(
   )
 Maintainer: Ger Inberg <g.inberg@erasmusmc.nl>
 Description: An R interface for generating features for a cohort using data in the Common Data Model. Features can be constructed using default or custom made feature definitions. Furthermore it's possible to aggregate features and get the summary statistics.
-Depends: R (>= 3.5.0), DatabaseConnector (>= 3.0.0), Andromeda
+Depends: R (>= 3.5.0), DatabaseConnector (>= 3.0.0), Andromeda (>=
+        1.0.0)
 Imports: methods, dplyr, rJava, jsonlite, SqlRender (>= 1.18.0),
         ParallelLogger (>= 2.0.2), cli, pillar, readr, rlang, RSQLite,
         DBI, checkmate, vroom
@@ -28,7 +29,7 @@ NeedsCompilation: no
 RoxygenNote: 7.3.2
 Encoding: UTF-8
 Language: en-US
-Packaged: 2025-04-16 13:12:46 UTC; ginberg
+Packaged: 2025-05-08 14:58:44 UTC; ginberg
 Author: Martijn Schuemie [aut],
   Marc Suchard [aut],
   Patrick Ryan [aut],
@@ -37,4 +38,4 @@ Author: Martijn Schuemie [aut],
   Ger Inberg [aut, cre],
   Observational Health Data Science and Informatics [cph]
 Repository: CRAN
-Date/Publication: 2025-04-20 09:50:02 UTC
+Date/Publication: 2025-05-08 15:40:02 UTC

@@ -29,8 +29,7 @@
 NULL
 
 .onLoad <- function(libname, pkgname) {
-  params <- c(getOption("java.parameters"), "-XX:+UseAllWindowsProcessorGroups")
-  rJava::.jpackage(pkgname, lib.loc = libname, parameters = params)
+  rJava::.jpackage(pkgname, lib.loc = libname)
 
   # Verify checksum of JAR:
   storedChecksum <- scan(file = system.file("csv", "jarChecksum.txt", package = "FeatureExtraction"), what = character(), quiet = TRUE)

@@ -1,0 +1,49 @@
+DBMS:
+sqlite
+
+Error:
+no such table: unknown.unknown
+
+SQL:
+CREATE TEMP TABLE cov_1
+AS
+SELECT
+CAST(covariate_cohort_id AS BIGINT) * 1000 + 999 AS covariate_id,
+	row_id,
+	1 AS covariate_value 
+FROM
+(
+	SELECT DISTINCT covariate_cohort.cohort_definition_id AS covariate_cohort_id,
+		cohort.subject_id AS row_id
+	FROM main.cohort_cov cohort
+	INNER JOIN unknown.unknown covariate_cohort
+		ON cohort.subject_id = covariate_cohort.subject_id
+	INNER JOIN temp.covariate_cohort_ref covariate_cohort_ref
+		ON covariate_cohort.cohort_definition_id = CAST(covariate_cohort_ref.cohort_id AS INT)
+	WHERE covariate_cohort.cohort_start_date <= CAST(STRFTIME('%s', DATETIME(cohort.cohort_start_date, 'unixepoch', (0)||' days')) AS REAL)
+		AND CASE WHEN covariate_cohort.cohort_end_date IS NULL THEN covariate_cohort.cohort_start_date ELSE covariate_cohort.cohort_end_date END >= CAST(STRFTIME('%s', DATETIME(cohort.cohort_start_date, 'unixepoch', (-365)||' days')) AS REAL)
+		AND cohort.cohort_definition_id IN (1)
+) by_row_id
+
+
+R version:
+R version 4.4.1 (2024-06-14)
+
+Platform:
+aarch64-apple-darwin20
+
+Attached base packages:
+- stats
+- graphics
+- grDevices
+- utils
+- datasets
+- methods
+- base
+
+Other attached packages:
+- FeatureExtraction (3.10.0)
+- Andromeda (1.0.0)
+- dplyr (1.1.4)
+- DatabaseConnector (6.3.2)
+- testthat (3.2.1.1)

@@ -1,8 +1,8 @@
 Package: FeatureExtraction
 Type: Package
 Title: Generating Features for a Cohort
-Version: 3.12.0
-Date: 2025-10-28
+Version: 3.13.0
+Date: 2026-03-05
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut")),
   person("Marc", "Suchard", role = c("aut")),
@@ -26,10 +26,10 @@ VignetteBuilder: knitr
 URL: https://github.com/OHDSI/FeatureExtraction
 BugReports: https://github.com/OHDSI/FeatureExtraction/issues
 NeedsCompilation: no
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Encoding: UTF-8
 Language: en-US
-Packaged: 2025-10-28 09:24:53 UTC; ginberg
+Packaged: 2026-03-06 09:37:42 UTC; ginberg
 Author: Martijn Schuemie [aut],
   Marc Suchard [aut],
   Patrick Ryan [aut],
@@ -38,4 +38,4 @@ Author: Martijn Schuemie [aut],
   Ger Inberg [aut, cre],
   Observational Health Data Science and Informatics [cph]
 Repository: CRAN
-Date/Publication: 2025-10-28 10:10:10 UTC
+Date/Publication: 2026-03-06 10:20:14 UTC
